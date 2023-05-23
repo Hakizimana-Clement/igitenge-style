@@ -1,6 +1,6 @@
 import React from "react";
 import Images from "./Images";
-function Gategories() {
+function Categories() {
   return (
     <div>
       <section className="container-fuild categories-section">
@@ -12,4 +12,4 @@ function Gategories() {
     </div>
   );
 }
-export default Gategories;
+export default Categories;

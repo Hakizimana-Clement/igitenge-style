@@ -1,4 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormControl from "@mui/material/FormControl";
 import { Card, Button, Modal } from "react-bootstrap";
 import { CartContext } from "../context/CardContext";
 import Carousel from "react-bootstrap/Carousel";
@@ -149,11 +153,41 @@ function ProductCard(props) {
                     </div>
                     <div className="mb-4 size-button">
                       <h4 className="mb-3">Select the size:</h4>
-                      <button className="rounded me-2">X</button>
-                      <button className="rounded me-2">XL</button>
-                      <button className="rounded me-2">M</button>
-                      <button className="rounded me-2">L</button>
-                      <button className="rounded me-2">XL</button>
+                      <FormControl>
+                        <RadioGroup
+                          row
+                          defaultValue="XS"
+                          aria-labelledby="demo-row-radio-buttons-group-label"
+                          name="size"
+                          type="submit"
+                        >
+                          <FormControlLabel
+                            value="XS"
+                            control={<Radio />}
+                            label="XS"
+                          />
+                          <FormControlLabel
+                            value="S"
+                            control={<Radio />}
+                            label="S"
+                          />
+                          <FormControlLabel
+                            value="M"
+                            control={<Radio />}
+                            label="M"
+                          />
+                          <FormControlLabel
+                            value="L"
+                            control={<Radio />}
+                            label="L"
+                          />
+                          <FormControlLabel
+                            value="XL"
+                            control={<Radio />}
+                            label="XL"
+                          />
+                        </RadioGroup>
+                      </FormControl>
                     </div>
 
                     {productQuantity > 0 ? (
